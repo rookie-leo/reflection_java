@@ -8,4 +8,11 @@ public class Controle {
 	public List<String> getLista() {
 		return lista;
 	}
+	
+	public Controle() {}
+	
+	public Controle(String s) {}
+	
+	private Controle(String s, String t) {}
+	
 }
