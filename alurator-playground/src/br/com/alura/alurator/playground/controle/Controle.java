@@ -16,4 +16,21 @@ public class Controle {
 	private Controle(String s, String t) {}
 
 	private void metodoControle1() {}
+
+	public void metodoControle2(String s1) {
+		System.out.println("Controle.metodoControle2(String s1, String s2)");
+		System.out.println("Parametro 1 obtido " + s1);
+	}
+
+	public void metodoControle2(String s1, String s2) {
+		System.out.println("Controle.metodoControle2(String s1, String s2)");
+		System.out.println("Parametro 1 obtido " + s1);
+		System.out.println("Parametro 2 obtido " + s2);
+	}
+
+	public void metodoControle2(String s1, Integer i1) {
+		System.out.println("Controle.metodoControle2(String s1, Integer i1)");
+		System.out.println("Parametro 1 obtido " + s1);
+		System.out.println("Parametro 2 obtido " + i1);
+	}
 }
