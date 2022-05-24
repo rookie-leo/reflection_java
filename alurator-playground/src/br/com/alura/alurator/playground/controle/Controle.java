@@ -14,5 +14,6 @@ public class Controle {
 	public Controle(String s) {}
 	
 	private Controle(String s, String t) {}
-	
+
+	private void metodoControle1() {}
 }
