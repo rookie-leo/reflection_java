@@ -3,6 +3,8 @@ package br.com.alura.alurator;
 import br.com.alura.alurator.protocolo.Request;
 import br.com.alura.alurator.reflexao.Reflexao;
 
+import java.util.Map;
+
 public class Alurator {
 
     private String pacoteBase;
@@ -18,18 +20,13 @@ public class Alurator {
         Request request = new Request(url);
         String nomeController = request.getNomeController();
         String nomeMetodo = request.getNomeMetodo();
-
-
-//        Object instanciaController = new Reflexao()
-//                .refleteClasse(pacoteBase + nomeController)
-//                .getConstrutorPadrao()
-//                .invoca();
+        Map<String, Object> params = request.getQueryParams();
 
         Object retorno = new Reflexao()
-                        .refleteClasse(pacoteBase + nomeController)
-                        .criaInstancia()
-                        .getMetodo(nomeMetodo)
-                        .invoca();
+                .refleteClasse(pacoteBase + nomeController)
+                .criaInstancia()
+                .getMetodo(nomeMetodo, params)
+                .invoca();
 
         System.out.println(retorno);
 
